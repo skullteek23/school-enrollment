@@ -1,0 +1,15 @@
+<h1>
+  Hi,<br />
+  Welcome to School Enrollment Portal!
+</h1>
+<app-basic-info></app-basic-info>
+<app-address-info></app-address-info>
+<button
+  [disabled]="disableButton"
+  mat-flat-button
+  color="primary"
+  type="button"
+  (click)="onSubmit()"
+>
+  Submit
+</button>

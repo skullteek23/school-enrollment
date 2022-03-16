@@ -1,0 +1,53 @@
+<h2>Student Basic Info</h2>
+<form [formGroup]="basicInfoForm">
+  <mat-form-field appearance="outline" color="primary">
+    <mat-label>Address Line 1</mat-label>
+    <input matInput type="text" formControlName="name" />
+    <mat-error *ngIf="basicInfoForm.get('name').hasError('required')">{{
+      ERROR_MSGS.required
+    }}</mat-error>
+    <mat-error *ngIf="basicInfoForm.get('name').hasError('maxLength')">
+      {{ ERROR_MSGS.maxLength }}
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline" color="primary">
+    <mat-label>Address Line 2</mat-label>
+    <input matInput type="text" formControlName="email" />
+    <mat-error *ngIf="basicInfoForm.get('email').hasError('required')">{{
+      ERROR_MSGS.required
+    }}</mat-error>
+    <mat-error *ngIf="basicInfoForm.get('email').hasError('maxLength')">
+      {{ ERROR_MSGS.maxLength }}
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline" color="primary">
+    <mat-label>Pincode</mat-label>
+    <input matInput type="text" formControlName="mobile" />
+    <mat-error *ngIf="basicInfoForm.get('mobile').hasError('required')">{{
+      ERROR_MSGS.required
+    }}</mat-error>
+    <mat-error *ngIf="basicInfoForm.get('mobile').hasError('maxLength')">
+      {{ ERROR_MSGS.maxLength }}
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline" color="primary">
+    <mat-label>City</mat-label>
+    <input matInput type="text" formControlName="dob" />
+    <mat-error *ngIf="basicInfoForm.get('dob').hasError('required')">{{
+      ERROR_MSGS.required
+    }}</mat-error>
+    <mat-error *ngIf="basicInfoForm.get('dob').hasError('maxLength')">
+      {{ ERROR_MSGS.maxLength }}
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field appearance="outline" color="primary">
+    <mat-label>State</mat-label>
+    <input matInput type="text" formControlName="gen" />
+    <mat-error *ngIf="basicInfoForm.get('gen').hasError('required')">{{
+      ERROR_MSGS.required
+    }}</mat-error>
+    <mat-error *ngIf="basicInfoForm.get('gen').hasError('maxLength')">
+      {{ ERROR_MSGS.maxLength }}
+    </mat-error>
+  </mat-form-field>
+</form>
